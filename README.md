@@ -1,2 +1,2 @@
 # react-telegram-comments
-A simple React component to integrate comments using Telegram's comments.app
+A simple React component/librarty to integrate comments using Telegram's comments.app
