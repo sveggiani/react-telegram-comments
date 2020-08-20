@@ -1,9 +1,11 @@
 {
   "name": "react-telegram-comments",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple React component/librarty to integrate comments using Telegram's comments.app",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w"
