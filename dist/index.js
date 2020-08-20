@@ -4,15 +4,17 @@ var React = require('react');
 
 var useEffect = React.useEffect, useRef = React.useRef;
 var COMMENTS_APP_SCRIPT = "https://comments.app/js/widget.js?3";
+React.createElement("script", { async: true, src: "https://comments.app/js/widget.js?3", "data-height": "300", "data-page-id": "myPage", "data-color": "8EC6EB", "data-outlined": "1", "data-colorful": "1", "data-dark": "1" });
 var TelegramCommentsDefaultProps = {
     commentsNumber: 5,
     containerClassName: "telegram-comments",
     isDark: false,
+    showColorfulNames: false,
     showDislikes: true,
     wrapperClassName: "telegram-comments__wrapper"
 };
 var TelegramComments = function (_a) {
-    var commentsNumber = _a.commentsNumber, containerClassName = _a.containerClassName, isDark = _a.isDark, showDislikes = _a.showDislikes, websiteKey = _a.websiteKey, wrapperClassName = _a.wrapperClassName;
+    var customColor = _a.customColor, customHeight = _a.customHeight, commentsNumber = _a.commentsNumber, containerClassName = _a.containerClassName, isDark = _a.isDark, pageId = _a.pageId, showColorfulNames = _a.showColorfulNames, showDislikes = _a.showDislikes, showIconOutlines = _a.showIconOutlines, websiteKey = _a.websiteKey, wrapperClassName = _a.wrapperClassName;
     try {
         // if no Website keys is passed do nothing
         if (!websiteKey) {
@@ -23,10 +25,15 @@ var TelegramComments = function (_a) {
             var script = document.createElement('script');
             script.src = COMMENTS_APP_SCRIPT;
             script.async = true;
-            script.setAttribute('data-comments-app-website', websiteKey);
-            isDark && script.setAttribute('data-dark', "1");
-            showDislikes && script.setAttribute('data-dislikes', "1");
+            customColor && script.setAttribute('data-color', customColor);
+            customHeight && script.setAttribute('data-height', customHeight);
             script.setAttribute('data-limit', commentsNumber);
+            isDark && script.setAttribute('data-dark', "1");
+            pageId && script.setAttribute('data-page-id', pageId);
+            showColorfulNames && script.setAttribute('data-colorful', "1");
+            showDislikes && script.setAttribute('data-dislikes', "1");
+            showIconOutlines && script.setAttribute('data-outlined', "1");
+            script.setAttribute('data-comments-app-website', websiteKey);
             if (placeholderRef_1.current) {
                 placeholderRef_1.current.appendChild(script);
             }

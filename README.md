@@ -28,9 +28,11 @@ The main motivation for this component is to a provide a lightweight alternative
 ## To-Do
 
 - [ ] Add some tests
-- [ ] Add prop for different color names
-- [ ] Add prop for custom color
-- [ ] Write better documentation
+- [x] Add prop for custom height
+- [x] Add prop for different color names
+- [x] Add prop for custom colors
+- [x] Add prop for icon outlines
+- [x] Write better documentation
 
     
 
@@ -60,23 +62,34 @@ The main motivation for this component is to a provide a lightweight alternative
 
 ## Configuration and Customization Using Props
 
+- `customColor` _{string}_ _optional_ Highlight color, hex value without # (`null`)
+- `customHeight` _{number}_ _optional_ Custom widget height in pixels (`null`)
 - `commentsNumber` _{number}_ _optional_ The number of comments to display (`5`)
-- `containerClassName`: _{string}_ _optional_ The components main container class (`"telegram-comments"`)
-- `isDark`: _{boolean}_ _optional_ Use dark theme (`false`)
-- `showDislikes`  _{boolean}_ _optional_ Add the dislike option for comments (`true`)
+- `isDark` _{boolean}_ _optional_ Use dark theme (`false`)
+- `pageId` _{string}_ _optional_ Unique identifier of the page. Page URL by default (`null`)
+- `showColorfulNames` _{boolean}_ _optional_ Use different color for usernames (`false`)
+- `showDislikes` _{boolean}_ _optional_ Add the dislike option for comments (`true`)
+- `showIconOutlines` _{boolean}_ _optional_ Display outlined icons (`false`)
 - `websiteKey`: _{string}_ _required_ The Site ID
+- `containerClassName`: _{string}_ _optional_ The components main container class (`"telegram-comments"`)
 - `wrapperClassName`: _{string}_ _optional_ The inner wrapper class, in case you need another one (`"telegram-comments__wrapper"`)
 
+    
 
 ### Full Example
 
 ```javascript
 <TelegramComments
+  customColor="fb9f9f"
+  customHeight="450"
   commentsNumber={3}
-  containerClassName="awesome-comments"
   isDark
+  pageId="about-page"
+  showColorfulNames
   showDislikes
+  showIconOutlines
   websiteKey={process.env.COMMENTS_APP_KEY}
+  containerClassName="awesome-comments"
   wrapperClassName="awesome-comments__wrapper"
 />
 ```
