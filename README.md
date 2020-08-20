@@ -17,17 +17,19 @@ The main motivation for this component is to a provide a lightweight alternative
 
 - Light / Dark themes
 - Customization for UI colors and icons
-- Replies to other users comments
+- Allow to reply to comments
 - Like or dislike options
-- Customization the number of comments to show
+- Customize the number of comments to show
 - Ability to add other users as Administrators or Moderators
 - Ability to delete comments and ban users
-- Suscribe to comments (using your Telegram account and )
+- Suscribe to comments (using your Telegram account and [@discussbot](https://t.me/discussbot))
 - Created by [Telegram](https://telegram.org) :blue_heart:
 
 ## To-Do
 
 - [ ] Add some tests
+- [ ] Add prop for different color names
+- [ ] Add prop for custom color
 - [ ] Write better documentation
 
     
@@ -58,12 +60,12 @@ The main motivation for this component is to a provide a lightweight alternative
 
 ## Configuration and Customization Using Props
 
-- `commentsNumber` _{number}_ optional The number of comments to display (`5`)
-- `containerClassName`: _{string}_ optional The components main container class (`"telegram-comments"`)
-- `isDark`: _{boolean}_ optional Use the dark theme (`false`)
-- `showDislikes`  _{boolean}_ Add the dislike option for comments (`true`)
+- `commentsNumber` _{number}_ _optional_ The number of comments to display (`5`)
+- `containerClassName`: _{string}_ _optional_ The components main container class (`"telegram-comments"`)
+- `isDark`: _{boolean}_ _optional_ Use dark theme (`false`)
+- `showDislikes`  _{boolean}_ _optional_ Add the dislike option for comments (`true`)
 - `websiteKey`: _{string}_ _required_ The Site ID
-- `wrapperClassName`: _{string}_ optional The inner wrapper class, in case you need another one (`"telegram-comments__wrapper"`)
+- `wrapperClassName`: _{string}_ _optional_ The inner wrapper class, in case you need another one (`"telegram-comments__wrapper"`)
 
 
 ### Full Example
