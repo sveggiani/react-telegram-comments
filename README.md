@@ -34,31 +34,25 @@ The main motivation for this component is to a provide a lightweight alternative
 - [x] Add prop for icon outlines
 - [x] Write better documentation
 
-    
-
 ## How to Use
 
 1. Sign-up to [comments.app](https://comments.app), add your site and get a valid _Site ID_ for your domain.
 2. Add the component package to your project with `yarn add react-telegram-comments` or `npm install react-telegram-comments`.
 3. Import the component in your pages or components:
-    ```javascript
-    import TelegramComments from 'react-telegram-comments';
-    ```
+   ```javascript
+   import TelegramComments from "react-telegram-comments";
+   ```
 4. Add `TelegramComments` to your component or page:
-    ```javascript
-    const Comments = () => (
-      <TelegramComments
-        websiteKey={websiteKey}
-      />
-    );
 
-    export default Comments;
-    ```
+   ```javascript
+   const Comments = () => <TelegramComments websiteKey={websiteKey} />;
+
+   export default Comments;
+   ```
+
 5. Done
 
-*Important:* Have in mind that for the moment the widget doesn't work with local domains. You'll need to publish your application to see it in action.
-
-    
+_Important:_ Have in mind that for the moment the widget doesn't work with local domains. You'll need to publish your application to see it in action.
 
 ## Configuration and Customization Using Props
 
@@ -73,8 +67,6 @@ The main motivation for this component is to a provide a lightweight alternative
 - `websiteKey`: _{string}_ _required_ The Site ID
 - `containerClassName`: _{string}_ _optional_ The components main container class (`"telegram-comments"`)
 - `wrapperClassName`: _{string}_ _optional_ The inner wrapper class, in case you need another one (`"telegram-comments__wrapper"`)
-
-    
 
 ### Full Example
 

@@ -1,39 +1,65 @@
 {
   "name": "react-telegram-comments",
-  "version": "1.1.0",
+  "version": "2.0.0-beta.2",
   "description": "A simple React component/librarty to integrate comments using Telegram's comments.app",
-  "main": "dist/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w"
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"src/{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run prettier:fix && npm run lint",
+    "prettier:fix": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --watch --config jestconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sveggiani/react-telegram-comments.git"
   },
-  "keywords": ["react", "component", "library", "telegram", "comments", "discussion"],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "component",
+    "library",
+    "telegram",
+    "comments",
+    "discussion"
+  ],
+  "author": "Sebastián Veggiani (sveggiani)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sveggiani/react-telegram-comments/issues"
   },
   "homepage": "https://github.com/sveggiani/react-telegram-comments#readme",
   "devDependencies": {
-    "@types/react": "^16.9.46",
-    "@types/react-dom": "^16.9.8",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "rollup": "^2.26.3",
-    "rollup-plugin-typescript2": "^0.27.2",
-    "typescript": "^3.9.7"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
+    "prettier": "^2.8.4",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
