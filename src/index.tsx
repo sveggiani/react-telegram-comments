@@ -11,10 +11,11 @@ const extendedOptions = {
   containerClassName: "test-container-class",
   customColor: "rebeccapurple",
   customHeight: 500,
+  onLoad: () => console.log("Comments loaded!"),
   pageId: "extended-example",
-  showColorfulNames: true,
-  showDislikes: true,
-  showIconOutlines: true,
+  showColorfulNames: false,
+  showDislikes: false,
+  showIconOutlines: false,
   useDarkMode: true,
   wrapperClassName: "test-wrapper-class",
 };
@@ -43,15 +44,11 @@ root.render(
 
       <div>
         <h3>Extended options</h3>
-        <TelegramComments
-          websiteKey="4gu8CYeE"
-          {...extendedOptions}
-          pageId="complete-example"
-        />
-        <br />
         <code>
           <pre>{JSON.stringify(extendedOptions, null, 2)}</pre>
         </code>
+        <br />
+        <TelegramComments websiteKey="4gu8CYeE" {...extendedOptions} />
       </div>
     </div>
   </React.StrictMode>
