@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 const extendedOptions = {
   commentsNumber: 10,
   containerClassName: "test-container-class",
-  customColor: "rebeccapurple",
+  customColor: "663399",
   customHeight: 500,
   onLoad: () => console.log("Comments loaded!"),
   pageId: "extended-example",
