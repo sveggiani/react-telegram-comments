@@ -35,5 +35,6 @@ jobs:
         run: yarn publish
 
         env:
+          NPM_CONFIG_LEGACY_PEER_DEPS: true
           # We need this to our NPM account
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
