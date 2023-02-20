@@ -1,6 +1,6 @@
 {
   "name": "react-telegram-comments",
-  "version": "2.0.0-beta.4",
+  "version": "2.0.0-beta.5",
   "description": "A simple React component/librarty to integrate comments using Telegram's comments.app",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

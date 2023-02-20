@@ -26,13 +26,13 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
-        run: yarn && yarn install
+        run: npm install
 
       - name: Build
-        run: yarn build
+        run: npm run build
 
       - name: Publish
-        run: yarn publish
+        run: npm run publish
 
         env:
           NPM_CONFIG_LEGACY_PEER_DEPS: true
