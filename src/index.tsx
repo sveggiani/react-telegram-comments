@@ -21,14 +21,14 @@ root.render(
 
       <div>
         <h3>Only set `websiteKey`</h3>
-        <TelegramComments websiteKey="hV0F0HuT" pageId="one" />
+        <TelegramComments websiteKey="4gu8CYeE" pageId="simple-example" />
       </div>
 
       <hr />
 
       <div>
         <h3>Counter with predefined value</h3>
-        <TelegramComments websiteKey="hV0F0HuT" pageId="two" />
+        <TelegramComments websiteKey="4gu8CYeE" pageId="complete-example" />
       </div>
     </div>
   </React.StrictMode>
