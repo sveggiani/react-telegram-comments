@@ -92,7 +92,7 @@ _Important:_ Have in mind that for the moment the widget doesn't work with local
 
 - Rewrite component using modern TypeScript and React.
 - New, simplified build system using `tsc` only.
-- Automatted builds and NPM publish using github actions.
+- Automated builds and NPM publish using github actions.
 - Add unitary tests (finally!).
 - Enhanced documentation and demo page added.
 - `isDark` prop renamed to `useDarkMode` (only breaking change from v1)
