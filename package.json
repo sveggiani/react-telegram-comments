@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Demo page of react-telegram-comments package",
   "scripts": {
-    "build": "parcel build src/index.html --dist-dir demo --public-url .",
+    "build": "parcel build src/index.html --dist-dir docs --public-url .",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "start": "parcel src/index.html"
   },
