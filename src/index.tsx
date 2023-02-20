@@ -5,10 +5,25 @@ import { TelegramComments } from "react-telegram-comments";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const extendedOptions = {
+  commentsNumber: 10,
+  containerClassName: "test-container-class",
+  customColor: "rebeccapurple",
+  customHeight: 500,
+  pageId: "extended-example",
+  showColorfulNames: true,
+  showDislikes: true,
+  showIconOutlines: true,
+  useDarkMode: true,
+  wrapperClassName: "test-wrapper-class",
+};
+
 root.render(
   <React.StrictMode>
     <div style={{ width: "600px", margin: "20px auto" }}>
       <h1>react-telegram-comments</h1>
+
       <h2>Demo page of react-telegram-comments package</h2>
 
       <a href="https://github.com/sveggiani/react-telegram-comments">
@@ -20,15 +35,23 @@ root.render(
       </a>
 
       <div>
-        <h3>Only set `websiteKey`</h3>
+        <h3>Minimal example (only set `websiteKey`)</h3>
         <TelegramComments websiteKey="4gu8CYeE" pageId="simple-example" />
       </div>
 
       <hr />
 
       <div>
-        <h3>Counter with predefined value</h3>
-        <TelegramComments websiteKey="4gu8CYeE" pageId="complete-example" />
+        <h3>Extended options</h3>
+        <TelegramComments
+          websiteKey="4gu8CYeE"
+          {...extendedOptions}
+          pageId="complete-example"
+        />
+        <br />
+        <code>
+          <pre>{JSON.stringify(extendedOptions, null, 2)}</pre>
+        </code>
       </div>
     </div>
   </React.StrictMode>
