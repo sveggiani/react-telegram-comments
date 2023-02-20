@@ -32,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm run publish
+        run: npm publish
 
         env:
           NPM_CONFIG_LEGACY_PEER_DEPS: true
